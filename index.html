@@ -1,113 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saumya Kathpalia Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f6f9;
-            color: #333;
-        }
-        header {
-            background: #0a66c2;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #0a66c2;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #0a66c2;
-            color: white;
-        }
-        a {
-            color: #0a66c2;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saumya Kathpalia | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: #f7f9fc;
+        color: #333;
+    }
+
+    header {
+        background: linear-gradient(135deg, #0a66c2, #004182);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 18px;
+        opacity: 0.9;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        margin: 20px 0;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    h2 {
+        color: #0a66c2;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    .skills span {
+        display: inline-block;
+        background: #eaf3ff;
+        color: #0a66c2;
+        padding: 8px 12px;
+        margin: 5px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    .contact a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: white;
+        background: #0a66c2;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .contact a:hover {
+        background: #004182;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: #0a66c2;
+        color: white;
+        margin-top: 30px;
+    }
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>Saumya Kathpalia</h1>
-    <p>Student | Tech Enthusiast | Problem Solver</p>
+    <p>Student • Tech Enthusiast • Problem Solver</p>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I am a passionate student interested in technology, software development, and solving real-world problems.
-        I enjoy working on projects and continuously learning new skills.
-    </p>
-</section>
+<div class="container">
 
-<section>
-    <h2>Education</h2>
-    <p><strong>Manav Rachna University</strong></p>
-    <p>B.Tech in Computer Science (or your course)</p>
-</section>
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            I am a motivated student at <strong>Manav Rachna University</strong> with a passion for 
+            technology and innovation. I enjoy building projects, participating in hackathons, 
+            and solving real-world problems using programming and analytical skills.
+        </p>
+    </div>
 
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li>C, C++, Python</li>
-        <li>Data Structures & Algorithms</li>
-        <li>Problem Solving</li>
-        <li>Git & VS Code</li>
-    </ul>
-</section>
+    <div class="card">
+        <h2>Education</h2>
+        <p><strong>Manav Rachna University</strong></p>
+        <p>B.Tech in Computer Science</p>
+    </div>
 
-<section>
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <strong>Village Road Damage Detection</strong><br>
-            Detects road cracks using image processing techniques.
-        </li>
-        <li>
-            <strong>File Handling in C</strong><br>
-            Program to find and replace words in files.
-        </li>
-        <li>
-            <strong>Digital Electronics Designs</strong><br>
-            Designed counters and shift registers.
-        </li>
-    </ul>
-</section>
+    <div class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>C</span>
+            <span>C++</span>
+            <span>Python</span>
+            <span>Data Structures</span>
+            <span>Algorithms</span>
+            <span>Git</span>
+        </div>
+    </div>
 
-<section>
-    <h2>Achievements</h2>
-    <ul>
-        <li>Participated in Hackathon</li>
-        <li>Active in technical projects</li>
-    </ul>
-</section>
+    <div class="card">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Village Road Damage Detection</strong> – Image processing based system to detect road cracks.</li>
+            <li><strong>File Handling in C</strong> – Program to find and replace words in files.</li>
+            <li><strong>Digital Electronics Designs</strong> – Designed counters and shift registers.</li>
+        </ul>
+    </div>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: your-email@example.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/saumya-kathpalia-ba612b381" target="_blank">View Profile</a></p>
-</section>
+    <div class="card">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Participated in Hackathon</li>
+            <li>Active in technical and academic projects</li>
+        </ul>
+    </div>
+
+    <div class="card contact">
+        <h2>Contact</h2>
+        <p>Email: your-email@example.com</p>
+        <a href="https://linkedin.com/in/saumya-kathpalia-ba612b381" target="_blank">LinkedIn Profile</a>
+    </div>
+
+</div>
 
 <footer>
-    <p>© 2026 Saumya Kathpalia</p>
+    © 2026 Saumya Kathpalia
 </footer>
 
 </body>
 </html>
+           
