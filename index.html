@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +11,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #0f172a;
+    background: linear-gradient(135deg, #0f172a, #020617);
     color: #e2e8f0;
 }
 
@@ -22,11 +23,11 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
-    background: rgba(15, 23, 42, 0.9);
+    padding: 20px 60px;
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
 }
 
 nav h2 {
@@ -34,22 +35,21 @@ nav h2 {
 }
 
 nav a {
-    color: white;
     margin-left: 20px;
     text-decoration: none;
+    color: white;
 }
 
 nav a:hover {
     color: #38bdf8;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 50px;
 }
 
 .hero-text {
@@ -64,37 +64,16 @@ nav a:hover {
     color: #38bdf8;
 }
 
-.hero p {
-    margin: 15px 0;
-    color: #94a3b8;
-}
-
-/* Profile Image */
 .hero img {
-    width: 250px;
+    width: 260px;
     border-radius: 50%;
     border: 4px solid #38bdf8;
-    box-shadow: 0 0 30px #38bdf8;
-    transition: 0.3s;
-}
-
-.hero img:hover {
-    transform: scale(1.05);
-}
-
-/* Button */
-.btn {
-    padding: 10px 20px;
-    background: #38bdf8;
-    color: black;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    box-shadow: 0 0 40px #38bdf8;
 }
 
 /* Sections */
 section {
-    padding: 80px 50px;
+    padding: 80px 60px;
 }
 
 /* Cards */
@@ -102,13 +81,12 @@ section {
     background: #1e293b;
     padding: 20px;
     margin: 10px;
-    border-radius: 12px;
+    border-radius: 15px;
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    background: #334155;
 }
 
 /* Grid */
@@ -117,103 +95,106 @@ section {
     flex-wrap: wrap;
 }
 
+/* Skills Bars */
+.skill {
+    margin: 10px 0;
+}
+
+.bar {
+    height: 8px;
+    background: #334155;
+    border-radius: 5px;
+}
+
+.fill {
+    height: 8px;
+    background: #38bdf8;
+    border-radius: 5px;
+}
+
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background: #020617;
 }
-
-/* Responsive */
-@media(max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero img {
-        margin-top: 20px;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
 <nav>
-    <h2>Saumya</h2>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
+<h2>Saumya</h2>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
-<!-- Hero Section -->
 <div class="hero">
-    <div class="hero-text">
-        <h1>Hi, I'm <span>Saumya Kathpalia</span></h1>
-        <p>First Year Engineering Student | Tech Enthusiast</p>
-        <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
-    </div>
-
-    <!-- Profile Photo -->
-    <img src="profile.jpg" alt="Profile Photo">
+<div class="hero-text">
+<h1>Hi, I'm <span>Saumya Kathpalia</span></h1>
+<p>First Year Engineering Student | Aspiring Developer | Tech Enthusiast</p>
+<p>I am passionate about building projects, learning new technologies, and growing in the tech field.</p>
 </div>
 
-<!-- About -->
+<img src="profile.jpg" alt="Profile">
+</div>
+
 <section id="about">
-    <h2>About Me</h2>
-    <p>I am a first-year engineering student passionate about technology, coding, and building projects. I love learning new skills and exploring innovation.</p>
+<h2>About Me</h2>
+<p>I am currently pursuing my engineering degree from Manav Rachna University. I am highly motivated to learn programming, problem-solving, and real-world applications of technology.</p>
+
+<h3>Education</h3>
+<p>B.Tech (1st Year) – Manav Rachna University</p>
+
+<h3>Career Goal</h3>
+<p>To become a skilled software developer and work on innovative projects that create real impact.</p>
 </section>
 
-<!-- Skills -->
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-        <div class="card">C Programming</div>
-        <div class="card">HTML & CSS</div>
-        <div class="card">Python Basics</div>
-        <div class="card">Problem Solving</div>
-    </div>
+<h2>Skills</h2>
+
+<div class="skill">C Programming<div class="bar"><div class="fill" style="width:70%"></div></div></div>
+<div class="skill">HTML & CSS<div class="bar"><div class="fill" style="width:80%"></div></div></div>
+<div class="skill">Python Basics<div class="bar"><div class="fill" style="width:60%"></div></div></div>
+<div class="skill">Problem Solving<div class="bar"><div class="fill" style="width:75%"></div></div></div>
+
 </section>
 
-<!-- Projects -->
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>Responsive portfolio using HTML & CSS</p>
-        </div>
-        <div class="card">
-            <h3>C Programs</h3>
-            <p>Basic problem-solving programs in C</p>
-        </div>
-    </div>
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Designed and developed a personal portfolio website using HTML, CSS.</p>
+</div>
+
+<div class="card">
+<h3>Road Damage Detection</h3>
+<p>Basic image processing project to detect road cracks using edge detection techniques.</p>
+</div>
+
+<div class="card">
+<h3>C Programming Projects</h3>
+<p>Developed multiple basic programs focusing on logic building.</p>
+</div>
+
+</div>
 </section>
 
-<!-- Contact -->
 <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+<h2>Contact</h2>
+<p>Email: your@email.com</p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/saumya-kathpalia-ba612b381" target="_blank">View Profile</a></p>
 </section>
 
-<!-- Footer -->
 <footer>
-    <p>© 2026 Saumya Kathpalia</p>
+<p>© 2026 Saumya Kathpalia | All Rights Reserved</p>
 </footer>
-
-<script>
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
-    });
-}
-</script>
 
 </body>
 </html>
