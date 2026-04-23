@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,18 +31,12 @@ nav {
     backdrop-filter: blur(10px);
 }
 
-nav h2 {
-    color: #38bdf8;
-}
+nav h2 { color: #38bdf8; }
 
 nav a {
     margin-left: 20px;
     text-decoration: none;
     color: white;
-}
-
-nav a:hover {
-    color: #38bdf8;
 }
 
 /* Hero */
@@ -52,17 +47,11 @@ nav a:hover {
     justify-content: space-around;
 }
 
-.hero-text {
-    max-width: 500px;
-}
+.hero-text { max-width: 500px; }
 
-.hero h1 {
-    font-size: 3rem;
-}
+.hero h1 { font-size: 3rem; }
 
-.hero span {
-    color: #38bdf8;
-}
+.hero span { color: #38bdf8; }
 
 .hero img {
     width: 260px;
@@ -71,9 +60,23 @@ nav a:hover {
     box-shadow: 0 0 40px #38bdf8;
 }
 
+/* Typing */
+.typing {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
 /* Sections */
 section {
     padding: 80px 60px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Cards */
@@ -83,6 +86,13 @@ section {
     margin: 10px;
     border-radius: 15px;
     transition: 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card:hover {
@@ -95,10 +105,8 @@ section {
     flex-wrap: wrap;
 }
 
-/* Skills Bars */
-.skill {
-    margin: 10px 0;
-}
+/* Skill Bars */
+.skill { margin: 10px 0; }
 
 .bar {
     height: 8px;
@@ -136,8 +144,8 @@ footer {
 <div class="hero">
 <div class="hero-text">
 <h1>Hi, I'm <span>Saumya Kathpalia</span></h1>
-<p>First Year Engineering Student | Aspiring Developer | Tech Enthusiast</p>
-<p>I am passionate about building projects, learning new technologies, and growing in the tech field.</p>
+<p class="typing" id="typing"></p>
+<p>Passionate about building projects and learning new technologies.</p>
 </div>
 
 <img src="profile.jpg" alt="Profile">
@@ -145,13 +153,7 @@ footer {
 
 <section id="about">
 <h2>About Me</h2>
-<p>I am currently pursuing my engineering degree from Manav Rachna University. I am highly motivated to learn programming, problem-solving, and real-world applications of technology.</p>
-
-<h3>Education</h3>
-<p>B.Tech (1st Year) – Manav Rachna University</p>
-
-<h3>Career Goal</h3>
-<p>To become a skilled software developer and work on innovative projects that create real impact.</p>
+<p>I am a first-year engineering student at Manav Rachna University with strong interest in coding and innovation.</p>
 </section>
 
 <section id="skills">
@@ -160,7 +162,6 @@ footer {
 <div class="skill">C Programming<div class="bar"><div class="fill" style="width:70%"></div></div></div>
 <div class="skill">HTML & CSS<div class="bar"><div class="fill" style="width:80%"></div></div></div>
 <div class="skill">Python Basics<div class="bar"><div class="fill" style="width:60%"></div></div></div>
-<div class="skill">Problem Solving<div class="bar"><div class="fill" style="width:75%"></div></div></div>
 
 </section>
 
@@ -170,17 +171,12 @@ footer {
 
 <div class="card">
 <h3>Portfolio Website</h3>
-<p>Designed and developed a personal portfolio website using HTML, CSS.</p>
+<p>Personal responsive website using HTML, CSS.</p>
 </div>
 
 <div class="card">
 <h3>Road Damage Detection</h3>
-<p>Basic image processing project to detect road cracks using edge detection techniques.</p>
-</div>
-
-<div class="card">
-<h3>C Programming Projects</h3>
-<p>Developed multiple basic programs focusing on logic building.</p>
+<p>Image processing project detecting road cracks.</p>
 </div>
 
 </div>
@@ -189,12 +185,51 @@ footer {
 <section id="contact">
 <h2>Contact</h2>
 <p>Email: your@email.com</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/saumya-kathpalia-ba612b381" target="_blank">View Profile</a></p>
+<p>LinkedIn: linkedin.com/in/saumya-kathpalia-ba612b381</p>
 </section>
 
 <footer>
-<p>© 2026 Saumya Kathpalia | All Rights Reserved</p>
+<p>© 2026 Saumya Kathpalia</p>
 </footer>
+
+<script>
+/* Typing Animation */
+const text = ["Aspiring Developer", "Tech Enthusiast", "Problem Solver"];
+let i = 0, j = 0, currentText = "", isDeleting = false;
+
+function type() {
+    currentText = text[i];
+    
+    if (!isDeleting) {
+        document.getElementById("typing").textContent = currentText.substring(0, j++);
+        if (j > currentText.length) {
+            isDeleting = true;
+            setTimeout(type, 1000);
+            return;
+        }
+    } else {
+        document.getElementById("typing").textContent = currentText.substring(0, j--);
+        if (j === 0) {
+            isDeleting = false;
+            i = (i + 1) % text.length;
+        }
+    }
+    setTimeout(type, isDeleting ? 50 : 100);
+}
+type();
+
+/* Fade-in on Scroll */
+const elements = document.querySelectorAll("section, .card");
+
+window.addEventListener("scroll", () => {
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        if (position < window.innerHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
