@@ -5,171 +5,192 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saumya Kathpalia | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-    body {
-        background: #f7f9fc;
-        color: #333;
-    }
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+}
 
-    header {
-        background: linear-gradient(135deg, #0a66c2, #004182);
-        color: white;
-        text-align: center;
-        padding: 60px 20px;
-    }
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(15, 23, 42, 0.9);
+    position: fixed;
+    width: 100%;
+}
 
-    header h1 {
-        font-size: 40px;
-        font-weight: 600;
-    }
+nav h2 {
+    color: #38bdf8;
+}
 
-    header p {
-        margin-top: 10px;
-        font-size: 18px;
-        opacity: 0.9;
-    }
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-    .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 20px;
-    }
+nav a:hover {
+    color: #38bdf8;
+}
 
-    .card {
-        background: white;
-        padding: 25px;
-        margin: 20px 0;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        transition: 0.3s;
-    }
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-    .card:hover {
-        transform: translateY(-5px);
-    }
+.hero h1 {
+    font-size: 3rem;
+}
 
-    h2 {
-        color: #0a66c2;
-        margin-bottom: 15px;
-    }
+.hero span {
+    color: #38bdf8;
+}
 
-    ul {
-        padding-left: 20px;
-    }
+.hero p {
+    margin: 15px 0;
+    color: #94a3b8;
+}
 
-    li {
-        margin-bottom: 8px;
-    }
+.btn {
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-    .skills span {
-        display: inline-block;
-        background: #eaf3ff;
-        color: #0a66c2;
-        padding: 8px 12px;
-        margin: 5px;
-        border-radius: 20px;
-        font-size: 14px;
-    }
+/* Sections */
+section {
+    padding: 80px 50px;
+}
 
-    .contact a {
-        display: inline-block;
-        margin-top: 10px;
-        text-decoration: none;
-        color: white;
-        background: #0a66c2;
-        padding: 10px 15px;
-        border-radius: 8px;
-        transition: 0.3s;
-    }
+/* Cards */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
 
-    .contact a:hover {
-        background: #004182;
-    }
+.card:hover {
+    transform: translateY(-10px);
+    background: #334155;
+}
 
-    footer {
-        text-align: center;
+/* Grid */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    nav {
         padding: 15px;
-        background: #0a66c2;
-        color: white;
-        margin-top: 30px;
     }
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Saumya Kathpalia</h1>
-    <p>Student • Tech Enthusiast • Problem Solver</p>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            I am a motivated student at <strong>Manav Rachna University</strong> with a passion for 
-            technology and innovation. I enjoy building projects, participating in hackathons, 
-            and solving real-world problems using programming and analytical skills.
-        </p>
+<!-- Navbar -->
+<nav>
+    <h2>Saumya</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
+</nav>
 
-    <div class="card">
-        <h2>Education</h2>
-        <p><strong>Manav Rachna University</strong></p>
-        <p>B.Tech in Computer Science</p>
+<!-- Hero -->
+<div class="hero">
+    <div>
+        <h1>Hi, I'm <span>Saumya Kathpalia</span></h1>
+        <p>First Year Engineering Student | Tech Enthusiast</p>
+        <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
     </div>
-
-    <div class="card">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>C</span>
-            <span>C++</span>
-            <span>Python</span>
-            <span>Data Structures</span>
-            <span>Algorithms</span>
-            <span>Git</span>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Village Road Damage Detection</strong> – Image processing based system to detect road cracks.</li>
-            <li><strong>File Handling in C</strong> – Program to find and replace words in files.</li>
-            <li><strong>Digital Electronics Designs</strong> – Designed counters and shift registers.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Achievements</h2>
-        <ul>
-            <li>Participated in Hackathon</li>
-            <li>Active in technical and academic projects</li>
-        </ul>
-    </div>
-
-    <div class="card contact">
-        <h2>Contact</h2>
-        <p>Email: your-email@example.com</p>
-        <a href="https://linkedin.com/in/saumya-kathpalia-ba612b381" target="_blank">LinkedIn Profile</a>
-    </div>
-
 </div>
 
+<!-- About -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a first-year engineering student passionate about technology, coding, and building projects. I love learning new skills and exploring innovation.</p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="card">C Programming</div>
+        <div class="card">HTML & CSS</div>
+        <div class="card">Python Basics</div>
+        <div class="card">Problem Solving</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Personal responsive portfolio using HTML & CSS</p>
+        </div>
+        <div class="card">
+            <h3>C Programs</h3>
+            <p>Basic problem-solving programs in C</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</section>
+
+<!-- Footer -->
 <footer>
-    © 2026 Saumya Kathpalia
+    <p>© 2026 Saumya Kathpalia</p>
 </footer>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+</script>
 
 </body>
 </html>
-           
