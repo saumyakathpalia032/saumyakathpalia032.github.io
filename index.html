@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +18,6 @@ body {
     color: #e2e8f0;
 }
 
-/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -39,7 +36,6 @@ nav a {
     color: white;
 }
 
-/* Hero */
 .hero {
     height: 100vh;
     display: flex;
@@ -60,13 +56,11 @@ nav a {
     box-shadow: 0 0 40px #38bdf8;
 }
 
-/* Typing */
 .typing {
     color: #38bdf8;
     font-weight: bold;
 }
 
-/* Sections */
 section {
     padding: 80px 60px;
     opacity: 0;
@@ -79,7 +73,6 @@ section.show {
     transform: translateY(0);
 }
 
-/* Cards */
 .card {
     background: #1e293b;
     padding: 20px;
@@ -99,13 +92,11 @@ section.show {
     transform: translateY(-10px);
 }
 
-/* Grid */
 .grid {
     display: flex;
     flex-wrap: wrap;
 }
 
-/* Skill Bars */
 .skill { margin: 10px 0; }
 
 .bar {
@@ -120,7 +111,6 @@ section.show {
     border-radius: 5px;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -145,7 +135,7 @@ footer {
 <div class="hero-text">
 <h1>Hi, I'm <span>Saumya Kathpalia</span></h1>
 <p class="typing" id="typing"></p>
-<p>Passionate about building projects and learning new technologies.</p>
+<p>Passionate about building projects, learning new technologies, and growing as a developer.</p>
 </div>
 
 <img src="profile.jpg" alt="Profile">
@@ -153,7 +143,17 @@ footer {
 
 <section id="about">
 <h2>About Me</h2>
-<p>I am a first-year engineering student at Manav Rachna University with strong interest in coding and innovation.</p>
+<p>
+I am a first-year engineering student at Manav Rachna University with a strong interest in technology, programming, and innovation. I am currently building my foundation in programming languages like C, Python, and web development using HTML and CSS.
+</p>
+
+<p>
+I enjoy solving problems, exploring new tools, and working on practical projects that enhance my technical skills. I am highly motivated to learn continuously and adapt to new challenges in the field of engineering.
+</p>
+
+<p>
+My goal is to gain hands-on experience through internships, projects, and collaborations, and to grow into a skilled software developer capable of building impactful and efficient solutions.
+</p>
 </section>
 
 <section id="skills">
@@ -176,7 +176,7 @@ footer {
 
 <div class="card">
 <h3>Road Damage Detection</h3>
-<p>Image processing project detecting road cracks.</p>
+<p>Image processing project detecting road cracks using edge detection techniques.</p>
 </div>
 
 </div>
@@ -184,7 +184,7 @@ footer {
 
 <section id="contact">
 <h2>Contact</h2>
-<p>Email: your@email.com</p>
+<p>Email: saumyakathpalia032@gmail.com</p>
 <p>LinkedIn: linkedin.com/in/saumya-kathpalia-ba612b381</p>
 </section>
 
@@ -193,7 +193,6 @@ footer {
 </footer>
 
 <script>
-/* Typing Animation */
 const text = ["Aspiring Developer", "Tech Enthusiast", "Problem Solver"];
 let i = 0, j = 0, currentText = "", isDeleting = false;
 
@@ -218,7 +217,6 @@ function type() {
 }
 type();
 
-/* Fade-in on Scroll */
 const elements = document.querySelectorAll("section, .card");
 
 window.addEventListener("scroll", () => {
